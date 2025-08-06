@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Incrível</title>
+</head>
+<body>
+    <hr>
+    <h2>Postagens!!!!!!!</h2>
+    <hr>
+    {% for postagem in posts %}
+    <img src="{{ postagem.imagem.url }}" alt="ggg">
+    <ul>
+        <p>Imagem: {{ postagem.imagem }}</p>
+        <p>Título: {{ postagem.titulo }}</p>
+        <p>Texto: {{ postagem.texto }}</p>
+        <p>Data de Publicação: {{ postagem.data_publicacao }}</p>
+    </ul>
+    <hr>
+    {% endfor %}
+
+    <footer>
+        <hr>
+            <p><center>Blogs incríveis com conteudos épicos nunca visto em lugar algum. 2025</center></p>
+        <hr>
+    </footer>
+</body>
+</html>
