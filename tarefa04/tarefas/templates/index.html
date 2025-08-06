@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista de Tarefas</title>
 </head>
 <body>
+    <h1>Tarefas</h1>
     
+    {% for tarefa in tarefas %}
+    <ul>
+        <li>Nome: {{ tarefa.nome }}</li>
+        <li>Status: {{ tarefa.status }}</li>
+        <li>Prazo: {{ tarefa.prazo }}</li>
+        {% if tarefa.prazo < hoje %}
+        <li>tarefa atrasada</li>
+        {% endif %}
+    </ul>
+    <hr>
+    {% endfor %}
+
+    <p>Data de hoje: {{ hoje }}</p>
 </body>
 </html>
